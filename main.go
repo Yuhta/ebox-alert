@@ -64,7 +64,7 @@ func login(client *http.Client, cred *credential) {
 	url, err := resp.Location()
 	panicOnError(err)
 	if url.Path != "/home" {
-		log.Panicf("Login failed, redirect to %v", url.Path)
+		log.Panicf("Login failed, redirect to %v", url)
 	}
 }
 
